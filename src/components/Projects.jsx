@@ -4,73 +4,29 @@ import './Projects.css'
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Microservices Platform',
-    description: 'A scalable e-commerce backend built with Java microservices — product, order, payment, and notification services communicating via REST and Kafka.',
-    technologies: ['Java', 'Spring Boot', 'Microservices', 'Kafka', 'MySQL', 'Docker'],
-    category: 'Java Backend',
-    github: 'https://github.com',
-    live: null,
-    emoji: '🛒',
-    color: '#f89820',
+    title: 'Finance Split',
+    description: 'A smart expense-splitting web app that helps groups track shared costs, split bills fairly, and settle debts effortlessly. Features real-time balance tracking, expense categorization, and intuitive split calculations for friends, roommates, and travel groups.',
+    technologies: ['React', 'JavaScript', 'CSS3', 'Netlify'],
+    category: 'Full Stack',
+    github: 'https://github.com/madhukiranp1227',
+    live: 'https://financesplit.netlify.app/',
+    emoji: '�',
+    color: '#4ade80',
   },
   {
     id: 2,
-    title: 'Banking System REST API',
-    description: 'A secure banking REST API with JWT authentication, role-based access control, transaction management, and Hibernate ORM integration.',
-    technologies: ['Java', 'Spring Security', 'JWT', 'Hibernate', 'PostgreSQL'],
-    category: 'Java Backend',
-    github: 'https://github.com',
-    live: null,
-    emoji: '🏦',
-    color: '#6db33f',
-  },
-  {
-    id: 3,
-    title: 'HR Management Dashboard',
-    description: 'A full-stack HR management system with a React frontend and Spring Boot backend — employee management, payroll, and leave tracking.',
-    technologies: ['React', 'Java', 'Spring Boot', 'MySQL', 'Redux'],
+    title: 'Task Manager',
+    description: 'A full-stack task management application inspired by Jira. Features JWT-based authentication, task creation with priority and status tracking, and a responsive dashboard. Built with React frontend, Spring Boot backend, and MySQL database.',
+    technologies: ['React', 'Spring Boot', 'Java', 'MySQL', 'JWT', 'Netlify'],
     category: 'Full Stack',
-    github: 'https://github.com',
-    live: 'https://example.com',
-    emoji: '👥',
+    github: 'https://github.com/madhukiranp1227',
+    live: 'https://taskmanagerjira.netlify.app/',
+    emoji: '✅',
     color: '#6c63ff',
-  },
-  {
-    id: 4,
-    title: 'Real-Time Chat App',
-    description: 'A real-time messaging application using Spring WebSocket (STOMP), Java backend, and React frontend with rooms and private messaging.',
-    technologies: ['Java', 'Spring WebSocket', 'STOMP', 'React', 'Redis'],
-    category: 'Full Stack',
-    github: 'https://github.com',
-    live: 'https://example.com',
-    emoji: '💬',
-    color: '#a855f7',
-  },
-  {
-    id: 5,
-    title: 'Inventory Management System',
-    description: 'A full-stack inventory system with Spring Boot REST API, React dashboard, PDF report generation, and MySQL database with JPA/Hibernate.',
-    technologies: ['Java', 'Spring Boot', 'React', 'MySQL', 'JPA', 'iText'],
-    category: 'Full Stack',
-    github: 'https://github.com',
-    live: 'https://example.com',
-    emoji: '📦',
-    color: '#00d4ff',
-  },
-  {
-    id: 6,
-    title: 'Student Portal React App',
-    description: 'A modern student portal frontend built with React and TypeScript that consumes a Java Spring Boot REST API for grades, courses, and schedules.',
-    technologies: ['React', 'TypeScript', 'Axios', 'Tailwind CSS'],
-    category: 'Frontend',
-    github: 'https://github.com',
-    live: 'https://example.com',
-    emoji: '🎓',
-    color: '#4ade80',
   },
 ]
 
-const categories = ['All', 'Full Stack', 'Java Backend', 'Frontend']
+const categories = ['All', 'Full Stack']
 
 const Projects = () => {
   const [active, setActive] = useState('All')
@@ -101,7 +57,7 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="container">
         <h2 className="section-title reveal">My <span>Projects</span></h2>
-        <p className="section-subtitle reveal">A showcase of Java Full Stack work I&apos;ve built</p>
+        <p className="section-subtitle reveal">Live projects I&apos;ve built and deployed</p>
 
         <div className="filter-tabs reveal">
           {categories.map(cat => (
@@ -143,16 +99,14 @@ const Projects = () => {
                   </svg>
                   GitHub
                 </a>
-                {project.live && (
-                  <a href={project.live} target="_blank" rel="noreferrer" className="project-link live">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                      <polyline points="15 3 21 3 21 9"/>
-                      <line x1="10" y1="14" x2="21" y2="3"/>
-                    </svg>
-                    Live Demo
-                  </a>
-                )}
+                <a href={project.live} target="_blank" rel="noreferrer" className="project-link live">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                  Live Demo
+                </a>
               </div>
             </div>
           ))}

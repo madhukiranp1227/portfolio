@@ -6,51 +6,83 @@ const skillCategories = [
     category: 'Java & Backend',
     icon: '☕',
     skills: [
-      { name: 'Java (8/11/17/21)', level: 95, color: '#f89820' },
-      { name: 'Spring Boot', level: 92, color: '#6db33f' },
-      { name: 'Spring Security + JWT', level: 85, color: '#6db33f' },
+      { name: 'Java (8/11/17)', level: 95, color: '#f89820' },
+      { name: 'Spring Boot', level: 93, color: '#6db33f' },
+      { name: 'Spring Security + JWT', level: 87, color: '#6db33f' },
       { name: 'Hibernate / JPA', level: 88, color: '#59666c' },
-      { name: 'Microservices', level: 80, color: '#f89820' },
+      { name: 'Microservices', level: 90, color: '#f89820' },
+      { name: 'Node.js / Express', level: 72, color: '#8cc84b' },
     ],
   },
   {
     category: 'Frontend',
     icon: '🎨',
     skills: [
-      { name: 'React', level: 88, color: '#61dafb' },
-      { name: 'JavaScript (ES6+)', level: 85, color: '#f7df1e' },
-      { name: 'TypeScript', level: 75, color: '#3178c6' },
+      { name: 'React.js', level: 90, color: '#61dafb' },
+      { name: 'Angular', level: 82, color: '#dd0031' },
+      { name: 'TypeScript', level: 80, color: '#3178c6' },
+      { name: 'JavaScript (ES6+)', level: 88, color: '#f7df1e' },
       { name: 'HTML5 & CSS3', level: 92, color: '#e34c26' },
-      { name: 'Redux', level: 72, color: '#764abc' },
+      { name: 'Redux', level: 75, color: '#764abc' },
     ],
   },
   {
-    category: 'Database',
+    category: 'Cloud & DevOps',
+    icon: '☁️',
+    skills: [
+      { name: 'AWS (EC2, S3, Lambda)', level: 85, color: '#ff9900' },
+      { name: 'Microsoft Azure', level: 78, color: '#0078d4' },
+      { name: 'Docker', level: 82, color: '#2496ed' },
+      { name: 'Kubernetes / EKS', level: 76, color: '#326ce5' },
+      { name: 'CI/CD (Jenkins / GitHub Actions)', level: 85, color: '#d24939' },
+      { name: 'Google Cloud (GCP)', level: 60, color: '#4285f4' },
+    ],
+  },
+  {
+    category: 'Databases',
     icon: '🗄️',
     skills: [
-      { name: 'MySQL', level: 90, color: '#4479a1' },
-      { name: 'PostgreSQL', level: 85, color: '#336791' },
-      { name: 'MongoDB', level: 72, color: '#47a248' },
-      { name: 'Redis (Caching)', level: 70, color: '#dc382d' },
+      { name: 'MySQL / PostgreSQL', level: 90, color: '#4479a1' },
+      { name: 'Oracle', level: 80, color: '#f80000' },
+      { name: 'MongoDB', level: 74, color: '#47a248' },
+      { name: 'DynamoDB', level: 72, color: '#ff9900' },
+      { name: 'Redis (Caching)', level: 74, color: '#dc382d' },
+      { name: 'Cassandra', level: 62, color: '#1287b1' },
     ],
   },
   {
-    category: 'Tools & DevOps',
-    icon: '🔧',
+    category: 'AI / ML / GenAI',
+    icon: '🤖',
     skills: [
+      { name: 'Generative AI & LLMs', level: 70, color: '#a855f7' },
+      { name: 'AI-driven API Integration', level: 75, color: '#a855f7' },
+      { name: 'NLP Pipelines', level: 65, color: '#7c3aed' },
+      { name: 'GitHub Copilot', level: 85, color: '#6e40c9' },
+      { name: 'Machine Learning (ML)', level: 62, color: '#9333ea' },
+    ],
+  },
+  {
+    category: 'Event Streaming & Tools',
+    icon: '⚡',
+    skills: [
+      { name: 'Apache Kafka', level: 84, color: '#231f20' },
+      { name: 'RabbitMQ / ActiveMQ', level: 72, color: '#ff6600' },
+      { name: 'GraphQL APIs', level: 68, color: '#e10098' },
       { name: 'Maven / Gradle', level: 88, color: '#c71a36' },
-      { name: 'Docker', level: 78, color: '#2496ed' },
-      { name: 'Git & GitHub', level: 92, color: '#f1502f' },
-      { name: 'AWS (EC2, S3, RDS)', level: 68, color: '#ff9900' },
+      { name: 'Git / GitHub / GitLab', level: 92, color: '#f1502f' },
     ],
   },
 ]
 
 const techBadges = [
-  'Java', 'Spring Boot', 'Spring Security', 'Spring MVC', 'Hibernate',
-  'JPA', 'React', 'JavaScript', 'TypeScript', 'REST APIs',
-  'Microservices', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis',
-  'Docker', 'Maven', 'Git', 'JWT', 'AWS',
+  'Java', 'Spring Boot', 'Spring Security', 'Spring Cloud', 'Hibernate',
+  'React.js', 'Angular', 'TypeScript', 'JavaScript', 'REST APIs',
+  'GraphQL', 'Microservices', 'Apache Kafka', 'OAuth 2.0', 'JWT',
+  'AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes',
+  'MySQL', 'PostgreSQL', 'MongoDB', 'DynamoDB', 'Redis',
+  'Generative AI', 'LLMs', 'GitHub Copilot', 'NLP',
+  'Jenkins', 'GitHub Actions', 'Maven', 'Git', 'ELK Stack',
+  'JUnit', 'Mockito', 'Selenium', 'Postman', 'Swagger',
 ]
 
 const Skills = () => {
@@ -58,7 +90,6 @@ const Skills = () => {
   const cardRefs = useRef([])
 
   useEffect(() => {
-    // Animate cards in on scroll
     const cardObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -74,16 +105,12 @@ const Skills = () => {
       if (card) cardObserver.observe(card)
     })
 
-    // Animate skill bars when section enters viewport
     const barObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Add animated class to all bars inside this section
             const bars = entry.target.querySelectorAll('.skill-fill')
-            bars.forEach((bar) => {
-              bar.classList.add('animate')
-            })
+            bars.forEach((bar) => bar.classList.add('animate'))
             barObserver.unobserve(entry.target)
           }
         })
@@ -91,9 +118,7 @@ const Skills = () => {
       { threshold: 0.2 }
     )
 
-    if (sectionRef.current) {
-      barObserver.observe(sectionRef.current)
-    }
+    if (sectionRef.current) barObserver.observe(sectionRef.current)
 
     return () => {
       cardObserver.disconnect()
@@ -105,7 +130,7 @@ const Skills = () => {
     <section id="skills" className="skills" ref={sectionRef}>
       <div className="container">
         <h2 className="section-title reveal">My <span>Skills</span></h2>
-        <p className="section-subtitle reveal">Java Full Stack technologies and tools I work with</p>
+        <p className="section-subtitle reveal">Java Full Stack, Cloud, AI/ML, and DevOps technologies I work with</p>
 
         <div className="skills-grid">
           {skillCategories.map((cat, index) => (

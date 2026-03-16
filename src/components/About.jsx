@@ -2,9 +2,9 @@ import './About.css'
 
 const stats = [
   { number: '5+', label: 'Years Experience' },
-  { number: '30+', label: 'Projects Completed' },
-  { number: '15+', label: 'Happy Clients' },
-  { number: '10+', label: 'Technologies' },
+  { number: '4', label: 'Companies' },
+  { number: 'AWS', label: 'Cloud Platform' },
+  { number: '30%', label: 'Release Cycle Reduction' },
 ]
 
 const About = () => {
@@ -17,7 +17,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-image-wrap fade-up">
             <div className="about-image">
-              <div className="about-avatar">YN</div>
+              <div className="about-avatar">MK</div>
             </div>
             <div className="about-image-deco"></div>
             <div className="experience-badge">
@@ -28,36 +28,39 @@ const About = () => {
 
           <div className="about-text fade-up" style={{ transitionDelay: '150ms' }}>
             <h3 className="about-heading">
-              I&apos;m a <span>Java Full Stack Developer</span> based in Your City
+              I&apos;m <span>Madhu Kiran Pathuri</span> — Java Full Stack Developer based in Seattle, WA
             </h3>
             <p className="about-para">
-              Hi there! I&apos;m a passionate Java Full Stack Developer who loves building scalable,
-              production-ready applications. I specialize in <strong>Java</strong> &amp; <strong>Spring Boot</strong> backends
-              with clean RESTful APIs, microservices architecture, and <strong>React</strong> frontends that deliver
-              exceptional user experiences.
+              Java Full Stack Developer with senior-level expertise delivering scalable, cloud-native applications.
+              Currently at <strong>Amazon</strong>, I lead the design and deployment of high-throughput microservices on <strong>AWS</strong>,
+              enabling secure, real-time transaction processing and integrating AI-driven fraud detection APIs.
             </p>
             <p className="about-para">
-              I have deep experience with the entire Java ecosystem — from <strong>Spring MVC</strong>, <strong>Spring Security</strong>,
-              and <strong>Hibernate/JPA</strong> to containerization with <strong>Docker</strong> and cloud deployments.
-              I&apos;m always learning and looking for impactful opportunities to grow. ☕
+              I implemented event-driven architectures using <strong>Apache Kafka</strong> and CI/CD pipelines that reduced release
+              cycle time by <strong>30%</strong>. I have deep experience across the full Java ecosystem — Spring Boot, Spring Security,
+              Hibernate/JPA, React, Docker, Kubernetes, and cloud deployments on AWS and Azure. ☕
             </p>
 
             <div className="about-details">
               <div className="detail-item">
                 <span className="detail-label">📧 Email</span>
-                <span className="detail-value">your@email.com</span>
+                <span className="detail-value">madhukiranpathuri1@gmail.com</span>
               </div>
               <div className="detail-item">
                 <span className="detail-label">📍 Location</span>
-                <span className="detail-value">Your City, Country</span>
+                <span className="detail-value">Seattle, Washington, USA</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">📞 Phone</span>
+                <span className="detail-value">858-243-3176</span>
               </div>
               <div className="detail-item">
                 <span className="detail-label">🎓 Degree</span>
-                <span className="detail-value">B.Sc. Computer Science</span>
+                <span className="detail-value">M.S. Computer Science — Cal State Long Beach</span>
               </div>
               <div className="detail-item">
                 <span className="detail-label">☕ Specialty</span>
-                <span className="detail-value">Java Full Stack</span>
+                <span className="detail-value">Java Full Stack &amp; Cloud-Native Apps</span>
               </div>
               <div className="detail-item">
                 <span className="detail-label">💼 Availability</span>

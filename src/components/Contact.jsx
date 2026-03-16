@@ -5,26 +5,32 @@ const contactInfo = [
   {
     icon: '📧',
     label: 'Email',
-    value: 'your@email.com',
-    href: 'mailto:your@email.com',
+    value: 'madhukiranpathuri1@gmail.com',
+    href: 'mailto:madhukiranpathuri1@gmail.com',
   },
   {
     icon: '📍',
     label: 'Location',
-    value: 'Your City, Country',
+    value: 'Seattle, Washington, USA',
     href: null,
+  },
+  {
+    icon: '📞',
+    label: 'Phone',
+    value: '858-243-3176',
+    href: 'tel:8582433176',
   },
   {
     icon: '💼',
     label: 'LinkedIn',
-    value: 'linkedin.com/in/yourname',
-    href: 'https://linkedin.com',
+    value: 'linkedin.com/in/madhukiran11',
+    href: 'https://www.linkedin.com/in/madhukiran11/',
   },
   {
     icon: '🐙',
     label: 'GitHub',
-    value: 'github.com/yourname',
-    href: 'https://github.com',
+    value: 'github.com/madhukiranp1227',
+    href: 'https://github.com/madhukiranp1227',
   },
 ]
 
@@ -58,9 +64,9 @@ const Contact = () => {
           <div className="contact-info fade-up">
             <h3 className="contact-info-title">Let&apos;s work together!</h3>
             <p className="contact-info-desc">
-              I&apos;m currently available for freelance work and full-time positions.
-              If you have a project that you want to get started or think you need
-              my help, feel free to reach out.
+              I&apos;m currently available for full-time positions and exciting projects.
+              Whether you need a Java Full Stack Developer, cloud-native architect, or
+              someone to build scalable microservices, feel free to reach out!
             </p>
 
             <div className="contact-items">
@@ -70,7 +76,7 @@ const Contact = () => {
                   <div className="contact-item-text">
                     <span className="contact-item-label">{item.label}</span>
                     {item.href ? (
-                      <a href={item.href} target="_blank" rel="noreferrer" className="contact-item-value link">
+                      <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer" className="contact-item-value link">
                         {item.value}
                       </a>
                     ) : (
