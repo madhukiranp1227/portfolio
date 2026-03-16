@@ -23,8 +23,8 @@ const contactInfo = [
   {
     icon: '💼',
     label: 'LinkedIn',
-    value: 'linkedin.com/in/madhukiran11',
-    href: 'https://www.linkedin.com/in/madhukiran11/',
+    value: 'linkedin.com/in/madhukiran12',
+    href: 'https://www.linkedin.com/in/madhukiran12/',
   },
   {
     icon: '🐙',

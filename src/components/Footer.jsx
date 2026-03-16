@@ -32,7 +32,7 @@ const Footer = () => {
             <h4>Connect</h4>
             <ul>
               <li><a href="https://github.com/madhukiranp1227" target="_blank" rel="noreferrer">GitHub</a></li>
-              <li><a href="https://www.linkedin.com/in/madhukiran11/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/in/madhukiran12/" target="_blank" rel="noreferrer">LinkedIn</a></li>
               <li><a href="mailto:madhukiranpathuri1@gmail.com">Email Me</a></li>
             </ul>
           </div>
